@@ -2,5 +2,48 @@
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
-@import 'components.content';
+//@import 'components.content';
 
+.grid-container {
+    display: grid;
+    max-width: auto;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 4fr;
+    //grid-gap: 1rem;
+}
+
+.header {
+    grid-area: header;
+}
+
+.top {
+    background-color: red;
+}
+
+.nav {
+    background-color: lime;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: purple;
+}
+
+.main {
+    grid-area: main;
+    background-color: orange;
+    //padding: 0;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: blue;
+}
