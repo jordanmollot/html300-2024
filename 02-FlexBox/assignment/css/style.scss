@@ -36,16 +36,16 @@
             padding: 1rem 1rem;
             flex-wrap: wrap;
             flex: 1 1 auto;
-            //@include media-query(tab) {
-            //    margin: 0;
-            //    width: auto;
-            //}
             // Nav styling
             &__list {
                 padding: 0;
                 margin: 0 auto;
                 list-style: none;
                 text-align: center;
+                // Nav responsiveness
+                @include media-query(mobile) {
+                    padding-bottom: 1rem;
+                }
             }
             &__item {
                 display: inline-block;
@@ -53,6 +53,10 @@
                 margin-right: 2rem;
                 &:last-of-type {
                     margin: 0;
+                }
+                // Nav responsiveness
+                @include media-query(mobile) {
+                    padding-top: 1rem;
                 }
             }
             &__link {
@@ -64,19 +68,29 @@
     .content-container {
         grid-area: content;
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
         // Sidebar
         &__sidebar {
             order: 1;
-            width: 20%;
+            width: 30%;
             background: purple;
+            // Sidebar responsiveness
+            @include media-query(mobile) {
+                order: 2;
+                width: 100%;
+                //display: none;
+            }
         }
         // Main content
         &__main {
             order: 2;
-            width: 80%;
+            width: 70%;
             background: orange;
+            // Main content responsiveness
+            @include media-query(mobile) {
+                order: 1;
+                width: 100%;
+            }
         }
         // Content text styling
         &__m-text, &__s-text {
