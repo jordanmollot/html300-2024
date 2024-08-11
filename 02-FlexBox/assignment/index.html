@@ -7,42 +7,62 @@
         <link rel="stylesheet" href="css/style.css" />
         <title>Assignment 02 - CSS Grid</title>
     </head>
-    <body class="grid-container">
-        <header class="header">
-            <div class="top">
-                Header
+    <body>
+        <div class="grid-container">
+            <header class="header">
+                <div class="top">
+                    Header
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Team</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Store</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Schedule</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="content-container">
+                <main class="content-container__main">
+                    <div class="content-container__m-text">
+                        <h2>Main Content</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea earum eos saepe dolorum commodi libero ducimus reiciendis facilis asperiores esse reprehenderit corporis exercitationem, tempore obcaecati? Eos explicabo officia similique.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, doloremque molestiae. Id atque autem, perferendis beatae voluptatem, quis veniam suscipit magnam animi corporis alias molestiae itaque a ab. Accusamus, facilis.
+                        </p>  
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, doloremque molestiae. Id atque autem, perferendis beatae voluptatem, quis veniam suscipit magnam animi corporis alias molestiae itaque a ab. Accusamus, facilis.
+                        </p> 
+                    </div> 
+                </main>
+
+                <aside class="content-container__sidebar">
+                    <div class="content-container__s-text">
+                        <h2>Sidebar</h2>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, doloremque molestiae. Id atque autem, perferendis beatae voluptatem, quis veniam suscipit magnam animi corporis alias molestiae itaque a ab. Accusamus, facilis.
+                        </p>
+                    </div>   
+                </aside>
             </div>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Contact</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Team</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Store</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Schedule</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
 
-        <main class="main">
-            Main Content
-        </main>
-
-        <aside class="sidebar">
-            Sidebar    
-        </aside>
-
-        <footer class="footer">
-            Footer
-        </footer>
+            <footer class="footer">
+                Footer
+            </footer>
+        </div>
     </body>
 </html>
