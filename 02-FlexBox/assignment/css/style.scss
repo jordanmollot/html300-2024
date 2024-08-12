@@ -1,13 +1,13 @@
-// Import partials here
+/* Import partials here */
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
-// Layout grid container
+/* Layout grid container */
 .grid-container {
     display: grid;
-    max-width: auto;
+    max-width: 100%;
     margin: auto;
     align-items: center;
     text-align: center;
@@ -18,31 +18,32 @@
         "footer";
         grid-template-columns: 1fr;
     grid-template-rows: 4fr;
-    // Header and Nav
+    /* Header and Nav */
     .header {
-        // Header
+        /* Header */
         grid-area: header;
         .top {
-            background: red;
+            background: $headerColor;
+            color: $textColor;
             padding: 3rem 3rem;
         }
-        // Nav flexbox container
+        /* Nav flexbox container */
         .nav {
             grid-area: nav;
-            background: lime;
+            background: $navColor;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 1rem;
             flex-wrap: wrap;
             flex: 1 1 auto;
-            // Nav styling
+            /* Nav styling */
             &__list {
                 padding: 0;
                 margin: 0 auto;
                 list-style: none;
                 text-align: center;
-                // Nav responsiveness
+                /* Nav responsiveness */
                 @include media-query(mobile) {
                     padding-bottom: 1rem;
                 }
@@ -54,54 +55,54 @@
                 &:last-of-type {
                     margin: 0;
                 }
-                // Nav responsiveness
+                /* Nav responsiveness */
                 @include media-query(mobile) {
                     padding-top: 1rem;
                 }
             }
             &__link {
-                color: white;
+                color: $textColor;
             }
         }
     }
-    // Main content and sidebar flexbox container
+    /* Main content and sidebar flexbox container */
     .content-container {
         grid-area: content;
         display: flex;
         flex-wrap: wrap;
-        // Sidebar
+        /* Sidebar */
         &__sidebar {
             order: 1;
             width: 30%;
-            background: purple;
-            // Sidebar responsiveness
+            background: $sidebarColor;
+            /* Sidebar responsiveness */
             @include media-query(mobile) {
                 order: 2;
                 width: 100%;
-                //display: none;
             }
         }
-        // Main content
+        /* Main content */
         &__main {
             order: 2;
             width: 70%;
-            background: orange;
-            // Main content responsiveness
+            background: $mainContentColor;
+            /* Main content responsiveness */
             @include media-query(mobile) {
                 order: 1;
                 width: 100%;
             }
         }
-        // Content text styling
+        /* Content text styling */
         &__m-text, &__s-text {
             padding: 3rem;
-            color: white;
+            color: $textColor;
         }
     }
-    // Footer
+    /* Footer */
     .footer {
         grid-area: footer;
-        background: blue;
+        background: $footerColor;
+        color: $textColor;
         padding: 3em 3rem;
     }
 }
