@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-warning">
                 <a class="navbar-brand" href="index.html">The Seattle Cinema</a>
                 <button
                     class="navbar-toggler"
@@ -43,21 +43,31 @@
         <main class="main">
             <h1 class="display-1">Welcome to The Seattle Cinema!</h1>
             <p class="lead">Seattle's premiere movie theater</p>
-            <h1 class="display-3 text-lowercase">Now Playing</h1>
-            <figure>
-                <img src="images/barry-lyndon-poster.jpeg" class="img-fluid" width="200" alt="theatrical poster for the film Barry Lyndon">
-                <p class="muted"><a href="#" data-bs-toggle="tooltip" data-bs-title="Barry Lyndon text here">Barry Lyndon</a></p>
-            </figure>
-            <figure>
-                <img src="images/eyes-wide-shut-poster.jpeg" class="img-fluid" width="200" alt="theatrical poster for the film Eyes Wide Shut">
-            </figure>
-            <figure>
-                <img src="images/full-metal-jacket-poster.jpeg" class="img-fluid" width="200" alt="theatrical poster for the film Full Metal Jacket">
-            </figure>
-            <h1 class="display-3 text-lowercase">Pricing</h1>
+            <h1 class="display-3 text-lowercase bg-warning-subtle">Now Playing</h1>
+            <div class="container text-center">
+                <p>Hover your mouse over the movie posters for descriptions of the films</p>
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-xs-12">
+                        <figure>
+                            <img src="images/barry-lyndon-poster.jpeg" data-bs-toggle="tooltip" title="Barry Lyndon (1975) - Acclaimed adaptation of William Makepeace Thackeray's novel, in which a likeable young Irishman changes into a conniving, manipulative rogue. The protagonist finds himself homeless after taking part in a fake duel and is then captured by a Prussian highwayman, and meets up with a spy, but his fortunes change when he marries a wealthy titled woman in order to secure his future." class="img-fluid" width="200" alt="theatrical poster for the film Barry Lyndon">
+                        </figure>
+                    </div>  
+                    <div class="col-xl-4 col-md-6 col-xs-12">  
+                        <figure>
+                            <img src="images/eyes-wide-shut-poster.jpeg" data-bs-toggle="tooltip" title="Eyes Wide Shut (1999) - After Dr. Bill Hartford's (Tom Cruise) wife, Alice (Nicole Kidman), admits to having sexual fantasies about a man she met, Bill becomes obsessed with having a sexual encounter. He discovers an underground sexual group and attends one of their meetings -- and quickly discovers that he is in over his head." class="img-fluid" width="200" alt="theatrical poster for the film Eyes Wide Shut">
+                        </figure>
+                    </div>
+                    <div class="col-xl-4 col-md-12 col-xs-12">
+                        <figure>
+                            <img src="images/full-metal-jacket-poster.jpeg" data-bs-toggle="tooltip" title="Full Metal Jacket (1987) - Stanley Kubrick's take on the Vietnam War follows smart-aleck Private Davis (Matthew Modine), quickly christened 'Joker' by his foul-mouthed drill sergeant (R. Lee Ermey), and pudgy Private Lawrence (Vincent D'Onofrio), nicknamed 'Gomer Pyle,' as they endure the rigors of basic training. Though Pyle takes a frightening detour, Joker graduates to the Marine Corps and is sent to Vietnam as a journalist, covering -- and eventually participating in -- the bloody Battle of Hué." class="img-fluid" width="200" alt="theatrical poster for the film Full Metal Jacket">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <h1 class="display-3 text-lowercase bg-warning-subtle">Pricing</h1>
             <p>General Admission: $11</p>
             <p>Student, Child, Military & Senior: $8</p>
-            <h1 class="display-3 text-lowercase">Hours</h1>
+            <h1 class="display-3 text-lowercase bg-warning-subtle">Hours</h1>
             <p>Monday through Sunday</p>
             <p>3pm - 11pm</p>
         </main>
