@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>Assignment 04 - Bootstrap Site</title>
+    </head>
+    <body>
+        <header>
+            <!--Bootstraps Nav bar (responsive)-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-warning p-4">
+                <a class="navbar-brand" href="index.html">The Seattle Cinema</a>
+                <button
+                    class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="showtimes.html">Showtimes</a>
+                        </li>                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="rental.html">Rental</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+            <h1 class="display-3 text-lowercase bg-warning-subtle px-3 pb-2">About the theater</h1>
+            <div class="p-3">
+                <p class="lead">The Seattle Cinema is the longest-running independent cinema in the city, and has become a landmark of the film community.</p>
+                <p>Opened in 1970 by Randy Findley in a converted dentist’s office, the cinema became the city’s first arthouse, showcasing foreign and revival films. The cinema was such a success it led to Randy’s opening the Seven Gables Cinema and eventually starting the local Seven Gables Theatres chain, which inevitably got swallowed by the national Landmark Cinema Corporation. The Seattle Cinema was never part of the Seven Gables chain; it has remained a popular independent venue.</p>
+                <p>A nonprofit film arts organization, the Northwest Film Forum, saved the theater from closure in 1997, remodeled it, and revitalized interest in the venerable institution. Since 2004, a strong group of dedicated staff and volunteers focus attention and energy on continuing the tradition of this treasured cinema. Over the years, literally hundreds of cinema classics, rarities and truly independent cinema from around the world have been presented in the charming confines of The Seattle Cinema.</p>
+            </div>
+        </main>
+        <!--Image Gallery. All the images have responsive sizes the image layout is responsive.-->
+        <section>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6 col-xs-12">
+                        <figure>
+                            <img src="images/front_door.jpg" class="img-fluid border border-black" width="640" alt="exteriro photo of the front door entrance to Seattle Cinema">
+                        </figure>
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-xs-12">
+                        <figure>
+                            <img src="images/interior2.jpg" class="img-fluid border border-black" width="640" alt="interior photo of the theater showing the seats from the front of the auditorium">
+                        </figure>
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-xs-12">
+                        <figure>
+                            <img src="images/interior.jpg" class="img-fluid border border-black" width="640" alt="interior photo of the theater showing the movie screen from the back of the auditorium">
+                        </figure>
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-xs-12">
+                        <figure>
+                            <img src="images/concessions.png" class="img-fluid border border-black" width="640" alt="interior photo of the concessions stand featuring glowing neon lights">
+                        </figure>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <!--links to Bootstrap libraries-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
