@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue";
+
+const show = ref(true);
 </script>
 
 <template>
@@ -17,13 +19,20 @@ import { ref } from "vue";
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero a esse sapiente nulla! Aliquid molestiae ipsa saepe et adipisci animi perspiciatis accusamus laboriosam magni nesciunt? Quas natus voluptates adipisci sit!</p>
         </div>
         <div class="col-xl-4 col-md-6 col-xs-12 mt-4">
-          <h1 class="display-6 text-capitalize bg-warning-subtle">cost</h1>
-          <p>$75 per hour</p>
-          <h1 class="display-6 text-capitalize bg-warning-subtle">concessions</h1>
-          <p>Drinks and candy are available at regular prices</p>
-          <p>Popcorn can be purchased at regular prices or you can purchase unlimited popcorn for the duration of your rental at a flat rate of $50 (regardless of party size)</p>
-          <h1 class="display-6 text-capitalize bg-warning-subtle">four-walling</h1>
-          <p>If you are a filmmaker or distributor, you can four-wall your film at the Seattle Cinema very affordably. Renter assumes all responsibility for promotions of the film. Gross ticket sales are forwarded to you and we keep sales from concessions.</p>
+          <h1 class="display-6">Interested in renting the theater?</h1>
+          <button @click="show = !show">More info!</button>
+          <div v-if="show">
+            <p>Click the button for theater rental details</p>
+          </div>
+          <div v-else>
+            <h1 class="display-6 text-capitalize bg-warning-subtle">cost</h1>
+            <p>$75 per hour</p>
+            <h1 class="display-6 text-capitalize bg-warning-subtle">concessions</h1>
+            <p>Drinks and candy are available at regular prices</p>
+            <p>Popcorn can be purchased at regular prices or you can purchase unlimited popcorn for the duration of your rental at a flat rate of $50 (regardless of party size)</p>
+            <h1 class="display-6 text-capitalize bg-warning-subtle">four-walling</h1>
+            <p>If you are a filmmaker or distributor, you can four-wall your film at the Seattle Cinema very affordably. Renter assumes all responsibility for promotions of the film. Gross ticket sales are forwarded to you and we keep sales from concessions.</p>
+          </div>
         </div>
     </div>
     </div>

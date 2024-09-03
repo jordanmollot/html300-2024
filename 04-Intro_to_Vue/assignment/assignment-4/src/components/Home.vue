@@ -34,9 +34,7 @@ const posters = ref([
       <h1 class="display-3 text-lowercase bg-warning-subtle px-3 pb-2">Hours</h1>
       <div class="px-3">
           <p>Monday through Sunday</p>
-          <p>3pm - 11pm</p>
-          <p>Is the theater currently open?</p>
-          
+          <p>3pm - 11pm</p>          
       </div>
   </main>
 </template>
