@@ -19,12 +19,14 @@ const show = ref(true);
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero a esse sapiente nulla! Aliquid molestiae ipsa saepe et adipisci animi perspiciatis accusamus laboriosam magni nesciunt? Quas natus voluptates adipisci sit!</p>
         </div>
         <div class="col-xl-4 col-md-6 col-xs-12 mt-4">
+          <!-- v-if and v-else statements used with a button to either display theater rental info or not-->
           <h1 class="display-6">Interested in renting the theater?</h1>
-          <button @click="show = !show">More info!</button>
+          <button class="m-3" @click="show = !show">More info!</button>
           <div v-if="show">
-            <p>Click the button for theater rental details</p>
+            <p class="p-1"><small>(Click the button for theater rental details)</small></p>
           </div>
           <div v-else>
+            <p class="p-1"><small>(Click the button again to hide theater rental details)</small></p>
             <h1 class="display-6 text-capitalize bg-warning-subtle">cost</h1>
             <p>$75 per hour</p>
             <h1 class="display-6 text-capitalize bg-warning-subtle">concessions</h1>

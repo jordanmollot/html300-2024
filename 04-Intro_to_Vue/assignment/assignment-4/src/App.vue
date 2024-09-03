@@ -58,7 +58,7 @@ const currentView = computed(() => {
   </nav>
 
   <component :is="currentView" />
-  <footer class="p-4">The Seattle Cinema, copyright 2024</footer>
+  <footer class="p-4 bg-warning">The Seattle Cinema, copyright 2024</footer>
 </template>
 
 <style scoped>
