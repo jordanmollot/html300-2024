@@ -1,6 +1,15 @@
 <script setup>
 import { ref } from "vue";
-import { ImageGallery } from "/ImageGallery.vue";
+import ImageGallery from "./ImageGallery.vue";
+
+const photos = ref([
+      { img: '/src/assets/front-door.jpg', class: 'img-fluid border border-black', width: '640', title: 'exterior photo of the theater', alt: 'exterior photo of the front door entrance to Seattle Cinema' },
+      { img: '/src/assets/interior2.jpg', class: 'img-fluid border border-black', width: '640', title: 'interior photo of the theater view 1', alt: 'interior photo of the theater showing the seats from the front of the auditorium' },
+      { img: '/src/assets/interior.jpg', class: 'img-fluid border border-black', width: '640', title: 'interior photo of the theater view 2', alt: 'interior photo of the theater showing the movie screen from the back of the auditorium' },
+      { img: '/src/assets/concessions.png', class: 'img-fluid border border-black', width: '640', title: 'photo of the concession stand', alt: 'interior photo of the concessions stand featuring glowing neon lights' },
+    ]
+)
+
 </script>
 
 <template>
@@ -12,9 +21,24 @@ import { ImageGallery } from "/ImageGallery.vue";
           <p>A nonprofit film arts organization, the Northwest Film Forum, saved the theater from closure in 1997, remodeled it, and revitalized interest in the venerable institution. Since 2004, a strong group of dedicated staff and volunteers focus attention and energy on continuing the tradition of this treasured cinema. Over the years, literally hundreds of cinema classics, rarities and truly independent cinema from around the world have been presented in the charming confines of The Seattle Cinema.</p>
       </div>
   </main>
-  <!--Image Gallery imported from ImageGallery.vue-->
   <section>
-    <ImageGallery />   
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-xl-6 col-md-6 col-xs-12">
+          <figure>
+            <ImageGallery
+              v-for="photo in photos"
+              :key="photo"
+              :src="photo.img" 
+              :class="photo.class" 
+              :width="photo.width" 
+              :title="photo.title"
+              :alt="photo.title" 
+            />
+          </figure>
+        </div>            
+      </div>  
+    </div> 
   </section>
 </template>
 
