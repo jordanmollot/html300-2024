@@ -21,14 +21,14 @@ const photos = ref([
           <p>A nonprofit film arts organization, the Northwest Film Forum, saved the theater from closure in 1997, remodeled it, and revitalized interest in the venerable institution. Since 2004, a strong group of dedicated staff and volunteers focus attention and energy on continuing the tradition of this treasured cinema. Over the years, literally hundreds of cinema classics, rarities and truly independent cinema from around the world have been presented in the charming confines of The Seattle Cinema.</p>
       </div>
   </main>
+
   <section>
+    <!--Image Gallery. All the images have responsive sizes and the image layout is responsive. Images are also generated dynamically using variables and a "v-for" loop-->
     <div class="container text-center">
       <div class="row">
-        <div class="col-xl-6 col-md-6 col-xs-12">
+        <div class="col-xl-6 col-md-6 col-xs-12" v-for="photo in photos" :key="photo">
           <figure>
             <ImageGallery
-              v-for="photo in photos"
-              :key="photo"
               :src="photo.img" 
               :class="photo.class" 
               :width="photo.width" 
@@ -36,7 +36,7 @@ const photos = ref([
               :alt="photo.title" 
             />
           </figure>
-        </div>            
+        </div>
       </div>  
     </div> 
   </section>

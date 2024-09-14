@@ -12,7 +12,6 @@ const props = defineProps({
 </script>
 
 <template>
-  <!--Image Gallery. All the images have responsive sizes and the image layout is responsive. Images are also generated dynamically using variables and a "v-for" loop-->
   <img :src="props.photo" :class="props.class" :width="props.width" :title="props.title" :alt="props.alt">
 </template>
 
