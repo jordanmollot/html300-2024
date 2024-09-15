@@ -3,12 +3,23 @@ import { ref } from "vue";
 import ImageGallery from "./ImageGallery.vue";
 
 const photos = ref([
-      { img: '/src/assets/front-door.jpg', class: 'img-fluid border border-black', width: '640', title: 'exterior photo of the theater', alt: 'exterior photo of the front door entrance to Seattle Cinema' },
-      { img: '/src/assets/interior2.jpg', class: 'img-fluid border border-black', width: '640', title: 'interior photo of the theater view 1', alt: 'interior photo of the theater showing the seats from the front of the auditorium' },
-      { img: '/src/assets/interior.jpg', class: 'img-fluid border border-black', width: '640', title: 'interior photo of the theater view 2', alt: 'interior photo of the theater showing the movie screen from the back of the auditorium' },
-      { img: '/src/assets/concessions.png', class: 'img-fluid border border-black', width: '640', title: 'photo of the concession stand', alt: 'interior photo of the concessions stand featuring glowing neon lights' },
+      { img: '/src/assets/front-door.jpg', class: 'img-fluid img-select', width: '640', title: 'exterior photo of the theater', alt: 'exterior photo of the front door entrance to Seattle Cinema' },
+      { img: '/src/assets/interior2.jpg', class: 'img-fluid img-select', width: '640', title: 'interior photo of the theater view 1', alt: 'interior photo of the theater showing the seats from the front of the auditorium' },
+      { img: '/src/assets/interior.jpg', class: 'img-fluid img-select', width: '640', title: 'interior photo of the theater view 2', alt: 'interior photo of the theater showing the movie screen from the back of the auditorium' },
+      { img: '/src/assets/concessions.png', class: 'img-fluid img-select', width: '640', title: 'photo of the concession stand', alt: 'interior photo of the concessions stand featuring glowing neon lights' },
     ]
 )
+
+let isActive = ref(true);
+function borderToggle (e) {
+  this.isActive = !this.isActive;
+  if (this.isActive === false) {
+    e.target.style.border = "solid black";
+  }
+  else {
+    e.target.style.border = "none";
+  }
+}   
 
 </script>
 
@@ -33,7 +44,8 @@ const photos = ref([
               :class="photo.class" 
               :width="photo.width" 
               :title="photo.title"
-              :alt="photo.title" 
+              :alt="photo.title"
+              @click="borderToggle($event)"
             />
           </figure>
         </div>
@@ -43,5 +55,6 @@ const photos = ref([
 </template>
 
 <style scoped>
+
 
 </style>
