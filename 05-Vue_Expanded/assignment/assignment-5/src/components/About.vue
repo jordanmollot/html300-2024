@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import ImageGallery from "./ImageGallery.vue";
+import { borderToggle } from "/src/composables/useBorderToggle";
 
 const photos = ref([
       { img: '/src/assets/front-door.jpg', class: 'img-fluid img-select', width: '640', title: 'exterior photo of the theater', alt: 'exterior photo of the front door entrance to Seattle Cinema' },
@@ -11,15 +12,6 @@ const photos = ref([
 )
 
 let isActive = ref(true);
-function borderToggle (e) {
-  this.isActive = !this.isActive;
-  if (this.isActive === false) {
-    e.target.style.border = "solid black";
-  }
-  else {
-    e.target.style.border = "none";
-  }
-}   
 
 </script>
 
