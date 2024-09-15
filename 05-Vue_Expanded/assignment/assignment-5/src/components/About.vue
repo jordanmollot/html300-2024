@@ -3,6 +3,7 @@ import { ref } from "vue";
 import ImageGallery from "./ImageGallery.vue";
 import { borderToggle } from "/src/composables/useBorderToggle";
 
+// object containing all photo/image properties for this page
 const photos = ref([
       { img: '/src/assets/front-door.jpg', class: 'img-fluid img-select', width: '640', title: 'exterior photo of the theater', alt: 'exterior photo of the front door entrance to Seattle Cinema' },
       { img: '/src/assets/interior2.jpg', class: 'img-fluid img-select', width: '640', title: 'interior photo of the theater view 1', alt: 'interior photo of the theater showing the seats from the front of the auditorium' },
@@ -26,11 +27,12 @@ let isActive = ref(true);
   </main>
 
   <section>
-    <!--Image Gallery. All the images have responsive sizes and the image layout is responsive. Images are also generated dynamically using variables and a "v-for" loop-->
+    <!--Image Gallery. All the images have responsive sizes and the image layout is responsive. Images are also generated dynamically using props and a "v-for" loop-->
     <div class="container text-center">
       <div class="row">
         <div class="col-xl-6 col-md-6 col-xs-12" v-for="photo in photos" :key="photo">
           <figure>
+            <!-- image gallery component -->
             <ImageGallery
               :src="photo.img" 
               :class="photo.class" 

@@ -27,6 +27,7 @@ const currentView = computed(() => {
 </script>
 
 <template>
+  <!-- header component and slot used to for header -->
   <HeaderComponent>
     <template v-slot:header>
       <nav class="navbar navbar-expand-lg navbar-light bg-warning p-4">
